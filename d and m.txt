@@ -1,0 +1,29 @@
+minikube start
+kubectl create deployment myngnix --image=ngnix
+kubectl get deployment
+kubectl expose deployment myngnix --type=NodePort --port=80 --target-port=80
+kubectl scale deployment myngnix --replicas=4
+kubectl get deployment
+kubectl get pods
+kubectl port-forward svc/myngnix 8081:80
+kubectl delete deployment myngnix
+kubectl delete service myngnix
+minikube stop
+
+
+
+create folder with calculator.js
+create dockerfile
+open powershell
+copy path
+docker build -t simple-calculator .
+docker run simple-calculator
+docker ps
+docker login
+docker tag simpel-calculator id/simple-calculator
+docker push id/simple-calculator
+docker rm 'containerid'
+docker mi id/simple-calculator
+docker pull id/simple-calculator
+docker run id/simple-calculator
+docker rm
